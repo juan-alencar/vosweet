@@ -19,7 +19,7 @@ return (
   <Container>
     <Header>
       <ProfileInfo>
-          <strong>Hello World!</strong>
+          <strong>Página Principal</strong>
       </ProfileInfo>
     </Header>
 
