@@ -26,7 +26,7 @@ export default createGlobalStyle`
  html {
     background: var(--primary);
  }
-
+ 
  :root{
      --primary: #F0F0F0;
      --secondary: #303030;

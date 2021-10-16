@@ -114,8 +114,8 @@ const iconCSS = css`
     fill: var(--gray);
 `;
 
-export const HomeIcon = styled(Home)`${iconCSS}`; 
-export const BellIcon = styled(Notifications)`${iconCSS}`; 
+export const HomeIcon = styled(Home)`${iconCSS}`;
+export const BellIcon = styled(Notifications)`${iconCSS}`;
 export const ProfileIcon = styled(Person)`${iconCSS}`;
 
 export const ExitIcon = styled(ExitToApp)`

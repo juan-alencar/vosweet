@@ -1,6 +1,6 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import Button from '../Button';
+import Modal from '../Modal';
 
 import { 
     Container, 
@@ -17,6 +17,7 @@ import {
 } from './styles';
 
 const MenuBar: React.FC = () => {
+    const [isModalVisible, setIsModalVisible] = useState(false);
 return (
     <Container>
         <TopSide>
@@ -32,16 +33,17 @@ return (
                 <span>Notificações</span>
             </MenuButton>
             
-            <MenuButton>
+            <MenuButton onClick={() => setIsModalVisible(true)}>
                 <ProfileIcon/>
                 <span>Perfil</span>
+                    {isModalVisible ? <Modal /> : null}
             </MenuButton>
 
             <Button>
                 <span>Postar</span>
             </Button>
         </TopSide>
-
+        
         <Botside>
             <Avatar src="https://i.ibb.co/fSMPFvy/juan.png"/>
 
