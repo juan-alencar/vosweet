@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Main from '../Main';
 import MenuBar from '../MenuBar'
-import Modal from '../Modal'
+import Modal from '../../../Modal'
 import { Container, Wrapper } from './styles';
 
 

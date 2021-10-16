@@ -32,6 +32,7 @@ export default createGlobalStyle`
      --secondary: #303030;
      --white: #FFFFFF;
      --gray: #808080;
+     --yellow: #FF9E00;
      --purple: #5A189A;
      --dark-hover: #03096C;
      --light-hover: #7B2CBF;

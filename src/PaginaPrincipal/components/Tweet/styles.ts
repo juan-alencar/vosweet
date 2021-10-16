@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Comment } from "../../styles/Icons"
+import { Comment } from "../../../styles/Icons"
 
 export const Container = styled.div`
     display: flex;

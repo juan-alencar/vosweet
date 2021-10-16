@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Home, Person, Notifications } from '../../styles/Icons'
+import { Home, Person, Notifications } from '../../../styles/Icons'
 
 export const Container = styled.div`
     display: flex;

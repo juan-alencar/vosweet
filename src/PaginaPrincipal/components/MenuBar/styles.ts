@@ -5,7 +5,7 @@ import {
     Notifications,
     ExitToApp,
     Person,
-    Twitter} from '../../styles/Icons'
+    Twitter} from '../../../styles/Icons'
 
 export const Container = styled.div`
     display: none;

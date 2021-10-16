@@ -1,13 +1,19 @@
 import React from 'react';
 
-import Layout from './components/Layout';
 import GlobalStyles from './styles/GlobalStyles';
+import { BrowserRouter } from 'react-router-dom';
+
+import Routes from './Routes';
 
 function App() {
   return (
 
     <>
-    <Layout />
+    <BrowserRouter>
+
+      <Routes />
+
+    </BrowserRouter>
     
     <GlobalStyles/>
     
