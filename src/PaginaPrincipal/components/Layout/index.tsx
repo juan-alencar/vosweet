@@ -14,9 +14,6 @@ const Layout: React.FC = () => {
           <Wrapper>
                 <MenuBar />
                 <Main />
-                <button onClick={() => setIsModalVisible(true)}>teste</button>
-                {isModalVisible ? <Modal /> : null}
-
           </Wrapper>
       </Container>
   );

@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import PaginaLogin from './PaginaLogin';
 import Layout from './PaginaPrincipal/components/Layout'
 
-export default () => {
+const Routes: React.FC = () => {
     return (
         <Switch>
             <Route exact path="/">
@@ -17,3 +17,5 @@ export default () => {
         </Switch>
 );
 }
+
+export default Routes;

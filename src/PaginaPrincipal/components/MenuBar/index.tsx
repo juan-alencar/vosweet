@@ -18,8 +18,8 @@ import {
 
 const MenuBar: React.FC = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
-return (
-    <Container>
+    return (
+        <Container>
         <TopSide>
             <Logo />
 
@@ -36,13 +36,14 @@ return (
             <MenuButton onClick={() => setIsModalVisible(true)}>
                 <ProfileIcon/>
                 <span>Perfil</span>
-                    {isModalVisible ? <Modal /> : null}
             </MenuButton>
 
             <Button>
                 <span>Postar</span>
             </Button>
         </TopSide>
+        
+        {isModalVisible ? <Modal /> : null}
         
         <Botside>
             <Avatar src="https://i.ibb.co/fSMPFvy/juan.png"/>
@@ -57,5 +58,6 @@ return (
     </Container>
 );
 }
+
 
 export default MenuBar;

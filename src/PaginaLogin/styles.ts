@@ -65,32 +65,39 @@ export const LoginBox = styled.div`
         margin-bottom: 30px;
     }
 `;
-export const Inputs = styled.div`
+export const Inputs = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
     outline: none;
     width: 100%;
-    
+
     > input {
         padding: 12px 16px;
         background-color: var(--white);
-        margin-bottom: 16px;
         border-radius: 20px;
         width: 100%;
-
+        
         &::placeholder{
             color: var(--gray);
-
+            
         }
-
+        
         &:focus{
             outline: none;
         }
     }
-
-
-`;
+    
+    > p {
+        color: var(--gray);
+        font-size: 14px;
+        margin-top: 4px;
+        margin-bottom: 16px;
+        margin-left: 16px;
+        align-self: flex-start;
+    }
+    
+    `;
 export const Line = styled.div`
     margin: 24px 0;
     height: 1px;
@@ -107,4 +114,11 @@ export const Button = styled.button`
     width: 100%;
     padding: 8px 0;
     border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover{
+        background: var(--light-hover);
+    }
 `;
