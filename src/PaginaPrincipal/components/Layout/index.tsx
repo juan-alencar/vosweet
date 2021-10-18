@@ -12,8 +12,10 @@ const Layout: React.FC = () => {
   return(
       <Container>
           <Wrapper>
-                <MenuBar />
-                <Main />
+            <MenuBar />
+            <Main />
+            <button  onClick={() => setIsModalVisible(true)}> magica</button>
+            {isModalVisible ? <Modal /> : null}
           </Wrapper>
       </Container>
   );

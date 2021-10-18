@@ -18,7 +18,7 @@ export const ModalDiv = styled.div`
     display: flex;
     flex-direction: column;
     
-    width: auto;
+    width: min(450px, max(280px, 80vw));
     height: auto;    
     padding: 32px 16px;
 
@@ -34,25 +34,39 @@ export const Title = styled.div`
     margin-bottom: 16px;
 `;
 
+export const SignUpForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
 export const Wrapper = styled.div`
     margin: 0 10px;
 `;
 
 export const Row = styled.div`
     display: flex;
-    margin-bottom: 8px;
+    flex-direction: column;
+    
+    
+    @media (min-width: 500px){
+        margin-bottom: 8px;
+        flex-direction: row;
+    }
 
     
 `;
 export const InputModal = styled.div`
     width: 100%;
-    margin: 0 8px;
+    margin-bottom: 8px;
     
-    
-    &.endereco {
-        width: 190%;
+    @media (min-width: 500px){
+        margin: 0 8px;
+        
+        &.endereco {
+            width: 190%;
+        }
     }
-    
     
     > input{
         background-color: var(--white);
@@ -70,6 +84,7 @@ export const InputModal = styled.div`
         &::-webkit-inner-spin-button {
             -webkit-appearance: none;
         }
+
     }
 
     > p {

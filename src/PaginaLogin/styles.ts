@@ -2,51 +2,61 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+
 `;
 
 export const SideImage = styled.div`
-    background: var(--purple);
-    height: 100vh;
-    width: 50%;
+
+    display: none;
+
+    @media (min-width: 1000px){
+        display: flex;
+        background: var(--purple);
+        height: auto;
+        width: 50%;
+    }
 `;
 export const LoginContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
     background: var(--white);
+    width: 100%;
+
+    @media (min-width: 1000px){
+        width: 50%;
+    }
     `;
 
 export const Title = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     
     > p {
-        color: var(--yellow);
-        font-size: 50px;
+        color: var(--purple);
+        font-size: 3em;
         font-weight: bold;
     }
-    
-    > span {
-        font-size: 25px;
-    }
-    `;
-
-export const Logo = styled.div`
-    background-color: var(--purple);
-    height: 100px;
-    width: 100px;
-    margin-bottom: 2vh;
-    border-radius: 50%;
-    flex-shrink: 0;
 `;
 
+export const Logo = styled.div`
+    background: var(--purple);
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    border-radius: 50%;
+`;
 
 export const LoginBox = styled.div`
-    width: min(450px, 28vw);
+    width: min(450px, max(280px, 80vw));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,12 +67,12 @@ export const LoginBox = styled.div`
 
     > p {
         font-size: 18px;
-        margin: 30px 0;
+        margin: 20px 0;
     }
     
     > span {
         font-size: 14px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 `;
 export const Inputs = styled.form`
@@ -99,7 +109,7 @@ export const Inputs = styled.form`
     
     `;
 export const Line = styled.div`
-    margin: 24px 0;
+    margin: 20px 0;
     height: 1px;
     width: 100%;
     background: var(--gray);

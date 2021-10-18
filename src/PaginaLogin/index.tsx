@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
+
 import { 
     Container, 
     SideImage, 
@@ -15,36 +16,31 @@ import {
     Button
 } from './styles';
 
-interface IFormInputs {
+interface LogInValidation {
   email: string
   password: string
 }
 
-const lowercaseRegex =  /(?=.*[a-z])/;
-const uppercaseRegex =  /(?=.*[A-Z])/;
-const numericRegex =  /(?=.*[0-9])/;  
-
 const schema = yup.object({
-    email: yup.string().email().required(),
-    password: yup.string()
-    .matches(uppercaseRegex, 'Bota uma letra maiúscula aí!')
-    .matches(lowercaseRegex, 'Agora uma minúscula, pra nóis')
-    .matches(numericRegex, 'Um numerozinho pra agradar')    
-    .min(8, 'Completa os 8 caracteres pra deixar perfeito')
-    .required('Senha é obrigatória'),
+    email: yup.string()
+    .email('Digite um email válido')
+    .required('Email é obrigatório'),
+
+    password: yup.string().required('A Senha é obrigatória'),
 }).required();
 
 const PaginaLogin: React.FC = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<IFormInputs>({
+    const { register, handleSubmit, formState: { errors } } = useForm<LogInValidation>({
     resolver: yupResolver(schema)
     });
-    const onSubmit = (data: IFormInputs) => console.log(data);
+    const onSubmit = (data: LogInValidation) => console.log(data);
 
     return (
         
         <Container>
             <SideImage/>
-                <LoginContainer>
+
+            <LoginContainer>
                 <Title>
                     <Logo />
                     <p>Vosweet</p>
@@ -71,7 +67,7 @@ const PaginaLogin: React.FC = () => {
 
                     <span>Não tem uma conta? <a href="/">Cadastre-se</a></span>
                 </LoginBox>
-            </LoginContainer>
+        </LoginContainer>
         </Container>
     );
 }
