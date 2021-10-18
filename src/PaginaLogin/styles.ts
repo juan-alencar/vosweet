@@ -6,6 +6,7 @@ export const Container = styled.div`
     margin: 0 auto;
     height: 100vh;
     width: 100%;
+    position: relative;
 
 `;
 
@@ -73,7 +74,19 @@ export const LoginBox = styled.div`
     > span {
         font-size: 14px;
         margin-bottom: 20px;
+       
+        > button {
+            text-decoration: underline;
+            color: var(--purple);
+            cursor: pointer;
+
+            &:hover{
+                color: var(--light-hover);
+            }
+
+        }
     }
+
 `;
 export const Inputs = styled.form`
     display: flex;

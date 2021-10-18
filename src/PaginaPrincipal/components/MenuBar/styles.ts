@@ -4,8 +4,8 @@ import {
     Home,
     Notifications,
     ExitToApp,
-    Person,
-    Twitter} from '../../../styles/Icons'
+    Person
+} from '../../../styles/Icons'
 
 export const Container = styled.div`
     display: none;
@@ -39,14 +39,12 @@ export const TopSide = styled.div`
     }
 `; 
 
-export const Logo = styled(Twitter)`
+export const Logo = styled.div`
     width: 41px;
     height: 41px;
     margin-bottom: 20px;
-    
-    > path{
-        fill: var(--purple);
-    }
+    background: var(--purple);
+    border-radius: 50%;
 `; 
 
 export const MenuButton = styled.button`

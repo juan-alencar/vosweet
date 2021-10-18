@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+
+import Modal from '../Modal'
 
 
 import { 
@@ -34,10 +36,12 @@ const PaginaLogin: React.FC = () => {
     resolver: yupResolver(schema)
     });
     const onSubmit = (data: LogInValidation) => console.log(data);
-
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    
     return (
         
         <Container>
+            {isModalVisible ? <Modal /> : null}
             <SideImage/>
 
             <LoginContainer>
@@ -65,7 +69,7 @@ const PaginaLogin: React.FC = () => {
 
                     <Line />
 
-                    <span>Não tem uma conta? <a href="/">Cadastre-se</a></span>
+                    <span>Não tem uma conta? <button onClick={() => setIsModalVisible(true)}>Cadastre-se</button></span>
                 </LoginBox>
         </LoginContainer>
         </Container>
@@ -73,3 +77,4 @@ const PaginaLogin: React.FC = () => {
 }
 
 export default PaginaLogin;
+<button  > magica</button>
