@@ -1,41 +1,40 @@
 import React from 'react';
 import Feed from '../Feed';
-import NewTweet from '../NewTweet'
+import NewTweet from '../NewTweet';
 
-import { 
-  Container, 
-  Header, 
-  ProfileInfo, 
+import {
+  Container,
+  Header,
+  ProfileInfo,
   BottomMenu,
-  BottomDiv, 
-  HomeIcon, 
+  BottomDiv,
+  HomeIcon,
   BellIcon,
-  ProfileIcon 
-}
-  from './styles'
+  ProfileIcon,
+} from './styles';
 
 const Main: React.FC = () => {
-return (
-  <Container>
-    <Header>
-      <ProfileInfo>
+  return (
+    <Container>
+      <Header>
+        <ProfileInfo>
           <strong>Página Principal</strong>
-      </ProfileInfo>
-    </Header>
+        </ProfileInfo>
+      </Header>
 
-    <NewTweet/>
+      <NewTweet />
 
-    <Feed />
+      <Feed />
 
-    <BottomMenu>
-      <HomeIcon className="active"/>
-      <BellIcon />
-      <ProfileIcon />
-    </BottomMenu>
-    
-    <BottomDiv />
-  </Container>
-);
-}
+      <BottomMenu>
+        <HomeIcon className="active" />
+        <BellIcon />
+        <ProfileIcon />
+      </BottomMenu>
+
+      <BottomDiv />
+    </Container>
+  );
+};
 
 export default Main;
