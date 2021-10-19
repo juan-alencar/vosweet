@@ -142,11 +142,11 @@ const FormDataChanges: React.FC = () => {
           </InputModal>
         </Row>
       </Wrapper>
-      <Button type="submit">Salvar</Button>
+      <Button type="submit">Cadastrar</Button>
 
       <Footer>
         <p>
-          <a href="/login">Excluir conta</a>
+          Já possui uma conta? <a href="/login">Entre</a>
         </p>
       </Footer>
     </SignUpForm>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Button from '../Button';
 
-import Modal from '../../../Modal';
 import GenericModal from '../../../GenericModal'
+import FormDataChanges from '../../../FormDataChanges';
 
 import {
   Container,
@@ -10,7 +10,6 @@ import {
   Logo,
   MenuButton,
   HomeIcon,
-  BellIcon,
   ProfileIcon,
   Botside,
   Avatar,
@@ -25,10 +24,10 @@ const MenuBar: React.FC = () => {
   return (
     <>
       <GenericModal 
-      title={'This is my modal'} 
+      title={'Alteração de Dados'} 
       onClose={toggleModal} 
       isOpen={isModalOpen}>
-        this is a son
+        <FormDataChanges />
       </GenericModal>
       <Container>
         <TopSide>

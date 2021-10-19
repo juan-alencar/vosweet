@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import Modal from '../Modal';
+import FormSignUp from '../FormSignUp';
 
 import {
   Container,
@@ -16,6 +16,7 @@ import {
   Line,
   Button,
 } from './styles';
+import GenericModal from '../GenericModal';
 
 interface LogInValidation {
   email: string;
@@ -50,7 +51,9 @@ const PaginaLogin: React.FC = () => {
 
   return (
     <Container>
-      <Modal onClose={toggleModal} isOpen={isModalOpen} />
+      <GenericModal title={'Cadastro de usuário'} onClose={toggleModal} isOpen={isModalOpen}>
+        <FormSignUp />
+      </GenericModal>
       <SideImage />
 
       <LoginContainer>

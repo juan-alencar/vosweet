@@ -172,13 +172,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </Row>
           </Wrapper>
           <Button type="submit">Cadastrar</Button>
-        </SignUpForm>
 
-        <Footer>
-          <p>
-            Já possui uma conta? <a href="/login">Entre</a>
-          </p>
-        </Footer>
+          <Footer>
+            <p>
+              Já possui uma conta? <a href="/login">Entre</a>
+            </p>
+          </Footer>
+        </SignUpForm>
       </ModalDiv>
     </Container>
   ) : null;
